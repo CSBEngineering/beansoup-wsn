@@ -548,7 +548,7 @@ NLS_sendStatus forward(struct NLS_HandleTypedef* hNLS , datagram_info* d_info)
 		//XXX PAOLO FORWARD
 		uint16_t tmp = hNLS->enabled_ifs;
 		tmp &= ~(1 << d_info->source_if);
-		CAL_InterfaceNumber ifxs[hNLS->enabled_ifs_num-1];
+		uint8_t ifxs[hNLS->enabled_ifs_num-1];
 		int i , j = 0;
 		for (i = 0 ; i < 16 ; i++)
 		{
